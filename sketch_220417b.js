@@ -12,6 +12,7 @@ function preload() {
   // Load image
   face1 = loadImage("face1.png");
   face2 = loadImage("face2.png");
+  face = loadImage("face.png");
   
 }
 
@@ -35,7 +36,7 @@ function setup() {
 
 function draw() {
   
-texture(face1)
+texture(face)
 if(pose){
   
   
@@ -48,10 +49,10 @@ if(pose){
 
   if(pose.leftEye.confidence > 0.8 && pose.rightEye.confidence > 0.8) //pose 1
     {
-      //texture(face1);
+      texture(face1);
       rotateX(dirY);
       rotateY(dirX);
-      if(pose.leftWrist.confidence > 0.5 || pose.rightWrist.confidence > 0.5)
+      if(pose.leftWrist.confidence > 0.4 || pose.rightWrist.confidence > 0.4)
       {
         texture(face2);
       }
