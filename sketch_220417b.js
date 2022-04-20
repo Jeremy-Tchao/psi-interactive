@@ -52,7 +52,7 @@ if(pose){
       texture(face1);
       rotateX(dirY);
       rotateY(dirX);
-      if(pose.leftWrist.confidence > 0.4 || pose.rightWrist.confidence > 0.4)
+      if(pose.leftWrist.confidence > 0.2 || pose.rightWrist.confidence > 0.2)
       {
         texture(face2);
       }
